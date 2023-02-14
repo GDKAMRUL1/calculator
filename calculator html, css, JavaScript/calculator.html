@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<style>
+
+	.calculator {
+		width: 300px;
+		margin: 0 auto;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 10px;
+		text-align: center;
+	  }
+	  
+	  .display {
+		background-color: #f2f2f2;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		padding: 5px;
+		margin-bottom: 10px;
+	  }
+	  
+	  .display p {
+		margin: 0;
+	  }
+	  
+	  .buttons {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	  }
+	  
+	  button {
+		width: 50px;
+		height: 50px;
+		border-radius: 5px;
+		border: none;
+		margin: 5px;
+		font-size: 24px;
+		cursor: pointer;
+	  }
+	  
+	  .operator {
+		background-color: #4CAF50;
+		color: white;
+	  }
+	  
+	  .number {
+		background-color: #f2f2f2;
+		color: black;
+	  }
+	  
+	  .clear {
+		background-color: #ff0000;
+		color: white;
+	  }
+	  
+	  .equal {
+		background-color: #008CBA;
+		color: white;
+	  }
+	</style>
+	
+</head>
+<body>
+	<div class="calculator">
+		<div class="display">
+			<p id="result">0</p>
+		</div>
+		<div class="buttons">
+			<button class="operator" id="add">+</button>
+			<button class="operator" id="subtract">-</button>
+			<button class="operator" id="multiply">*</button>
+			<button class="operator" id="divide">/</button>
+			<button class="number" id="seven">7</button>
+			<button class="number" id="eight">8</button>
+			<button class="number" id="nine">9</button>
+			<button class="number" id="four">4</button>
+			<button class="number" id="five">5</button>
+			<button class="number" id="six">6</button>
+			<button class="number" id="one">1</button>
+			<button class="number" id="two">2</button>
+			<button class="number" id="three">3</button>
+			<button class="number" id="zero">0</button>
+			<button class="clear" id="clear">C</button>
+			<button class="equal" id="equal">=</button>
+		</div>
+	</div>
+
+
+</body>
+
+
+<script src="script.js">
+	const buttons = document.querySelectorAll("button");
+const display = document.querySelector("#result");
+
+let firstOperand = 0;
+let secondOperand = 0;
+let operator = null;
+let shouldResetDisplay = false;
+
+function calculate() 
+{
+  let result = 0;
+  switch (operator) {
+    case "+":
+      result = parseFloat(firstOperand) + parseFloat(secondOperand);
+      break;
+    case "-":
+      result = parseFloat(firstOperand) - parseFloat(secondOperand);
+      break;
+    case "*":
+      result = parseFloat(firstOperand) * parseFloat(secondOperand);
+      break;
+    case "/":
+      result = parseFloat(firstOperand) / parseFloat(secondOperand);
+      break;
+    default:
+      return;
+  }
+  display.textContent =
+
+
+
+</script>
+}
+</html>
